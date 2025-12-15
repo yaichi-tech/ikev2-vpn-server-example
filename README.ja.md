@@ -32,6 +32,7 @@ Windows 8, 10, 11 以降は自動でIKEv2設定をインポートできます。
 **VPN接続方法:**
 システムトレイのネットワークアイコンをクリック → 新しいVPNエントリを選択 → 「接続」をクリック
 
+- 公式ドキュメント: https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/docs/ikev2-howto.md#windows-7-8-10-and-11
 - 動画: https://ko-fi.com/post/IKEv2-Auto-Import-Configuration-on-Windows-8-10-a-K3K1DQCHW
 
 ### Mac

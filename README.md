@@ -32,6 +32,7 @@ Windows 8, 10, and 11+ users can automatically import IKEv2 configuration.
 **To connect to the VPN:**
 Click on the network icon in your system tray → Select the new VPN entry → Click "Connect"
 
+- Documentation: https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/docs/ikev2-howto.md#windows-7-8-10-and-11
 - Video: https://ko-fi.com/post/IKEv2-Auto-Import-Configuration-on-Windows-8-10-a-K3K1DQCHW
 
 ### Mac
