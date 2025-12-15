@@ -4,6 +4,31 @@
 
 DockerによるIKEv2 VPNサーバーです。OSの標準機能でVPN接続できます。
 
+## IKEv2とは
+
+IKEv2 (Internet Key Exchange version 2) は、IPsec VPNで使用される鍵交換プロトコルです。
+
+**従来のVPN方式と比較した利点:**
+
+- **OS標準サポート**: Windows、macOS、iOS、Androidで追加ソフトウェア不要
+- **高速な再接続**: ネットワーク切り替え時（Wi-Fi ↔ モバイル）に自動で再接続
+- **強力な暗号化**: AES-256などの最新の暗号化アルゴリズムをサポート
+- **NAT対応**: ファイアウォールやNAT環境下でも安定して動作
+- **バッテリー効率**: モバイルデバイスでのバッテリー消費が少ない
+
+## デプロイ
+
+1. `compose.yml` の環境変数を設定:
+   - `VPN_DNS_NAME`: VPNサーバーのドメイン名
+   - `VPN_CLIENT_NAME`: クライアント名
+
+2. コンテナを起動:
+   ```bash
+   docker compose up -d
+   ```
+
+3. 初回起動時にクライアント設定ファイル (`.p12`, `.mobileconfig`) が `ikev2-vpn-data/` に生成されます
+
 ## サーバー設定
 
 サーバーのファイアウォールで以下のポートを開放してください:

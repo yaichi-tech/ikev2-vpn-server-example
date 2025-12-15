@@ -4,6 +4,31 @@
 
 IKEv2 VPN server using Docker. You can connect using your OS's built-in VPN functionality.
 
+## What is IKEv2?
+
+IKEv2 (Internet Key Exchange version 2) is a key exchange protocol used for IPsec VPN.
+
+**Advantages over traditional VPN methods:**
+
+- **Native OS support**: No additional software needed on Windows, macOS, iOS, Android
+- **Fast reconnection**: Automatically reconnects when switching networks (Wi-Fi ↔ mobile)
+- **Strong encryption**: Supports modern encryption algorithms like AES-256
+- **NAT-friendly**: Works reliably behind firewalls and NAT
+- **Battery efficient**: Lower battery consumption on mobile devices
+
+## Deployment
+
+1. Configure environment variables in `compose.yml`:
+   - `VPN_DNS_NAME`: VPN server domain name
+   - `VPN_CLIENT_NAME`: Client name
+
+2. Start the container:
+   ```bash
+   docker compose up -d
+   ```
+
+3. On first startup, client configuration files (`.p12`, `.mobileconfig`) are generated in `ikev2-vpn-data/`
+
 ## Server Setup
 
 Open the following ports on the server firewall:
