@@ -1,0 +1,17 @@
+services:
+  vpnserver:
+    image: hwdsl2/ipsec-vpn-server
+    ports:
+      - 500:500/udp
+      - 4500:4500/udp
+    volumes:
+      - ./ikev2-vpn-data:/etc/ipsec.d
+      - /lib/modules:/lib/modules:ro
+    privileged: true
+    environment:
+      - VPN_IKEV2_ONLY=yes
+      - VPN_DNS_NAME=vpn.example.com
+      - VPN_CLIENT_NAME=example-vpn
+      # - VPN_DNS_SRV1=1.1.1.1
+      # - VPN_DNS_SRV2=1.0.0.1
+    restart: unless-stopped
